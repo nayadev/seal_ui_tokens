@@ -2,11 +2,26 @@
   "name": "@sealui/tokens",
   "version": "0.0.1",
   "type": "module",
+  "exports": {
+    ".": {
+      "types": "./build/react/dist/index.d.ts",
+      "import": "./build/react/dist/index.mjs",
+      "require": "./build/react/dist/index.js"
+    },
+    "./tailwind": {
+      "types": "./build/react/dist/tailwind/index.d.ts",
+      "import": "./build/react/dist/tailwind/index.mjs",
+      "require": "./build/react/dist/tailwind/index.js"
+    },
+    "./css/base": "./build/react/src/css/base.css",
+    "./css/themes/*": "./build/react/src/css/themes/*.css"
+  },
   "scripts": {
     "build": "node sd.config.js",
     "build:flutter": "node sd.config.js --platform flutter",
     "build:react": "node sd.config.js --platform react",
-    "clean": "rm -rf build/flutter/lib build/react/src build/react/dist"
+    "clean": "rm -rf build/flutter/lib build/react/src build/react/dist",
+    "prepare": "cd build/react && npm install && npm run build"
   },
   "dependencies": {
     "style-dictionary": "^4.3.3"
