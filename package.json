@@ -20,8 +20,7 @@
     "build": "node sd.config.js",
     "build:flutter": "node sd.config.js --platform flutter",
     "build:react": "node sd.config.js --platform react",
-    "clean": "rm -rf build/flutter/lib build/react/src build/react/dist",
-    "prepare": "cd build/react && npm install && npm run build"
+    "clean": "rm -rf build/flutter/lib build/react/src build/react/dist"
   },
   "dependencies": {
     "style-dictionary": "^4.3.3"
