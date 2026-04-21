@@ -1,0 +1,28 @@
+.arctic-dark {
+  --seal-brand-primary: #29b6f6;
+  --seal-brand-primary-tint: #81d4fa;
+  --seal-brand-primary-shade: #0288d1;
+  --seal-accent-accent: #00bcd4;
+  --seal-accent-accent-secondary: #26c6da;
+  --seal-accent-on-accent: #e8f4fc;
+  --seal-surface-background: #071822;
+  --seal-surface-surface: #0d2333;
+  --seal-surface-surface-alt: #112840;
+  --seal-text-primary: #e8f4fc;
+  --seal-text-secondary: #6ea8c4;
+  --seal-text-on-primary: #e8f4fc;
+  --seal-border-default: #0d3050;
+  --seal-semantic-success: #1de9b6;
+  --seal-semantic-warning: #ff9800;
+  --seal-semantic-error: #ff5252;
+  --seal-semantic-info: #29b6f6;
+  --seal-state-foreground-active: #29b6f6;
+  --seal-state-foreground-disabled: rgba(41, 182, 246, 0.4);
+  --seal-state-fill-active: #29b6f6;
+  --seal-state-fill-disabled: rgba(41, 182, 246, 0.4);
+  --seal-gradient-primary: linear-gradient(to bottom right, #29B6F6 0%, #26C6DA 100%);
+  --seal-gradient-accent: linear-gradient(to bottom right, #00BCD4 0%, #26A69A 100%);
+  --seal-gradient-surface: linear-gradient(to bottom right, #29B6F614 0%, #26C6DA14 100%);
+  --seal-gradient-surface-primary: linear-gradient(to bottom right, #29B6F619 0%, #0288D119 100%);
+  --seal-gradient-surface-accent: linear-gradient(to bottom right, #26C6DA19 0%, #00BCD419 100%);
+}

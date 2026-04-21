@@ -1,0 +1,114 @@
+{
+  "brand": {
+    "$type": "color",
+    "primary": {
+      "$value": "#007A6B",
+      "$description": "Dark cyan-green — primary brand color on light surfaces. Evokes printed terminal output."
+    },
+    "primary-tint": {
+      "$value": "#009B88",
+      "$description": "Lighter tint of the Terminal light primary"
+    },
+    "primary-shade": {
+      "$value": "#005A4D",
+      "$description": "Darker shade of the Terminal light primary"
+    }
+  },
+  "accent": {
+    "$type": "color",
+    "accent": {
+      "$value": "#3A4F50",
+      "$description": "Dark gray with a subtle teal undertone — secondary color in the terminal palette"
+    },
+    "accent-secondary": {
+      "$value": "#526868",
+      "$description": "Secondary accent — slightly lighter teal-gray"
+    },
+    "on-accent": {
+      "$value": "#F0FFF8",
+      "$description": "Light text on dark gray — maintains contrast on filled accent surfaces"
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "background": {
+      "$value": "#F0F8F6",
+      "$description": "Off-white with a faint cyan tint — reminiscent of terminal paper printouts"
+    },
+    "surface": {
+      "$value": "#FFFFFF",
+      "$description": "Primary light surface"
+    },
+    "surface-alt": {
+      "$value": "#E3F2EF",
+      "$description": "Alternative surface — cards, elevated sections"
+    }
+  },
+  "text": {
+    "$type": "color",
+    "primary": {
+      "$value": "#0A1E1C",
+      "$description": "Primary text on light surfaces — near-black with teal undertone"
+    },
+    "secondary": {
+      "$value": "#3D6B65",
+      "$description": "Secondary / muted text"
+    },
+    "on-primary": {
+      "$value": "#F0FFF8",
+      "$description": "Light text on dark cyan fill — ensures contrast on primary-colored buttons"
+    }
+  },
+  "border": {
+    "$type": "color",
+    "default": {
+      "$value": "#B0D4CE",
+      "$description": "Default border color"
+    }
+  },
+  "semantic": {
+    "$type": "color",
+    "success": {
+      "$value": "#1A8C00",
+      "$description": "Success state"
+    },
+    "warning": {
+      "$value": "#B87800",
+      "$description": "Warning state"
+    },
+    "error": {
+      "$value": "#CC1133",
+      "$description": "Error state"
+    },
+    "info": {
+      "$value": "#006B99",
+      "$description": "Info state"
+    }
+  },
+  "state": {
+    "foreground": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Foreground active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#007A6B66",
+        "$type": "color",
+        "$description": "Foreground disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    },
+    "fill": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Fill active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#007A6B66",
+        "$type": "color",
+        "$description": "Fill disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "gradient": {
+    "$description": "Arctic dark-mode gradient tokens — ice-blue and glacier-cyan. Direction uses extra fields beyond DTCG stops to capture Flutter LinearGradient begin/end alignment.",
+    "primary": {
+      "$type": "gradient",
+      "$description": "Primary gradient — ice blue to glacier cyan. Used on primary buttons and hero elements.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#29B6F6", "position": 0.0 },
+          { "color": "#26C6DA", "position": 1.0 }
+        ]
+      }
+    },
+    "accent": {
+      "$type": "gradient",
+      "$description": "Accent gradient — glacier cyan to teal. Subtle highlight for surfaces and cards.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#00BCD4", "position": 0.0 },
+          { "color": "#26A69A", "position": 1.0 }
+        ]
+      }
+    },
+    "surface": {
+      "$type": "gradient",
+      "$description": "Surface gradient — very subtle ice-blue sheen. Color(0x1429B6F6) and Color(0x1426C6DA): alpha=0x14 (8% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#29B6F614", "position": 0.0 },
+          { "color": "#26C6DA14", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-primary": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with primary. Color(0x1929B6F6) and Color(0x190288D1): alpha=0x19 (10% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#29B6F619", "position": 0.0 },
+          { "color": "#0288D119", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-accent": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with accent. Color(0x1926C6DA) and Color(0x1900BCD4): alpha=0x19 (10% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#26C6DA19", "position": 0.0 },
+          { "color": "#00BCD419", "position": 1.0 }
+        ]
+      }
+    }
+  }
+}

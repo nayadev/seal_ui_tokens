@@ -1,0 +1,65 @@
+{
+  "gradient": {
+    "$description": "Nebula light-mode gradient tokens. Primary and accent gradients are identical to dark mode; surface gradients use opaque lavender, periwinkle and mint pastel tints for visibility on bright white surfaces.",
+    "primary": {
+      "$type": "gradient",
+      "$description": "Primary gradient — same as dark: vibrant purple to periwinkle blue.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#8055E0", "position": 0.0 },
+          { "color": "#4A96E8", "position": 1.0 }
+        ]
+      }
+    },
+    "accent": {
+      "$type": "gradient",
+      "$description": "Accent gradient — same as dark: primary shade to teal green.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#6340B8", "position": 0.0 },
+          { "color": "#32B88C", "position": 1.0 }
+        ]
+      }
+    },
+    "surface": {
+      "$type": "gradient",
+      "$description": "Surface gradient — soft lavender to periwinkle pastel. Visible and harmonious on white surfaces.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#EDE8FF", "position": 0.0 },
+          { "color": "#E3EFFF", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-primary": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with primary — deeper lavender tint range for primary-accented containers.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#EAE3FF", "position": 0.0 },
+          { "color": "#E5DCFF", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-accent": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with accent — mint to sky tint for accent-accented containers.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#DAF5EE", "position": 0.0 },
+          { "color": "#E0EFFF", "position": 1.0 }
+        ]
+      }
+    }
+  }
+}

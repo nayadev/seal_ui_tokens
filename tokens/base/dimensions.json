@@ -1,0 +1,42 @@
+{
+  "dimension": {
+    "$type": "dimension",
+    "$description": "Seal UI spacing scale based on a 4px base unit. Values here are the unscaled base (scaleFactor=1.0 / mobile). At runtime, SealDimension(factor) multiplies each value by the breakpoint factor: mobile=1.0, tablet=1.125, desktop=1.333.",
+    "xxxs": {
+      "$value": "2px",
+      "$description": "2px — minimum nudge"
+    },
+    "xxs": {
+      "$value": "4px",
+      "$description": "4px — tight gap"
+    },
+    "xs": {
+      "$value": "8px",
+      "$description": "8px — small gap"
+    },
+    "sm": {
+      "$value": "12px",
+      "$description": "12px — small spacing"
+    },
+    "md": {
+      "$value": "16px",
+      "$description": "16px — base / default spacing"
+    },
+    "lg": {
+      "$value": "24px",
+      "$description": "24px — large spacing"
+    },
+    "xl": {
+      "$value": "32px",
+      "$description": "32px — extra-large spacing"
+    },
+    "xxl": {
+      "$value": "48px",
+      "$description": "48px — section spacing"
+    },
+    "xxxl": {
+      "$value": "64px",
+      "$description": "64px — page-level spacing"
+    }
+  }
+}

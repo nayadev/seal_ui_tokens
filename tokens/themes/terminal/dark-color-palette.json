@@ -1,0 +1,114 @@
+{
+  "brand": {
+    "$type": "color",
+    "primary": {
+      "$value": "#00CC99",
+      "$description": "Phosphor cyan-green — primary brand color. Evokes classic CRT terminal text."
+    },
+    "primary-tint": {
+      "$value": "#33D9AA",
+      "$description": "Lighter tint of the Terminal primary"
+    },
+    "primary-shade": {
+      "$value": "#009970",
+      "$description": "Darker shade of the Terminal primary"
+    }
+  },
+  "accent": {
+    "$type": "color",
+    "accent": {
+      "$value": "#7A9A9A",
+      "$description": "Medium gray with a teal cast — visible against the near-black background"
+    },
+    "accent-secondary": {
+      "$value": "#556B6B",
+      "$description": "Secondary accent — darker teal-gray"
+    },
+    "on-accent": {
+      "$value": "#D4FFF8",
+      "$description": "Light cyan-white on dark gray — ensures readability on accent-filled surfaces"
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "background": {
+      "$value": "#060C0C",
+      "$description": "Near-black with a faint teal phosphor cast — like a powered-on CRT"
+    },
+    "surface": {
+      "$value": "#0C1A1A",
+      "$description": "Primary dark surface"
+    },
+    "surface-alt": {
+      "$value": "#122222",
+      "$description": "Alternative surface — cards, elevated sections"
+    }
+  },
+  "text": {
+    "$type": "color",
+    "primary": {
+      "$value": "#D4FFF8",
+      "$description": "Bright cyan-white — the classic glowing terminal text"
+    },
+    "secondary": {
+      "$value": "#6B7E7E",
+      "$description": "Secondary / muted text"
+    },
+    "on-primary": {
+      "$value": "#D4FFF8",
+      "$description": "Light cyan-white on cyan fill — fulfills the light-on-button requirement"
+    }
+  },
+  "border": {
+    "$type": "color",
+    "default": {
+      "$value": "#143030",
+      "$description": "Default border color"
+    }
+  },
+  "semantic": {
+    "$type": "color",
+    "success": {
+      "$value": "#39FF14",
+      "$description": "Phosphor green success — consistent with the terminal aesthetic"
+    },
+    "warning": {
+      "$value": "#FFB627",
+      "$description": "Amber warning — the classic terminal warning color"
+    },
+    "error": {
+      "$value": "#FF3355",
+      "$description": "Error state"
+    },
+    "info": {
+      "$value": "#00B8D9",
+      "$description": "Info state"
+    }
+  },
+  "state": {
+    "foreground": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Foreground active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#00CC9966",
+        "$type": "color",
+        "$description": "Foreground disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    },
+    "fill": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Fill active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#00CC9966",
+        "$type": "color",
+        "$description": "Fill disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    }
+  }
+}

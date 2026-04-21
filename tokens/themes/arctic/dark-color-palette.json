@@ -1,0 +1,114 @@
+{
+  "brand": {
+    "$type": "color",
+    "primary": {
+      "$value": "#29B6F6",
+      "$description": "Ice blue — primary brand color"
+    },
+    "primary-tint": {
+      "$value": "#81D4FA",
+      "$description": "Lighter tint of the Arctic primary"
+    },
+    "primary-shade": {
+      "$value": "#0288D1",
+      "$description": "Darker shade of the Arctic primary"
+    }
+  },
+  "accent": {
+    "$type": "color",
+    "accent": {
+      "$value": "#00BCD4",
+      "$description": "Glacier cyan — primary accent"
+    },
+    "accent-secondary": {
+      "$value": "#26C6DA",
+      "$description": "Secondary accent"
+    },
+    "on-accent": {
+      "$value": "#E8F4FC",
+      "$description": "Foreground for content placed over accent-colored surfaces"
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "background": {
+      "$value": "#071822",
+      "$description": "Main dark background"
+    },
+    "surface": {
+      "$value": "#0D2333",
+      "$description": "Primary dark surface"
+    },
+    "surface-alt": {
+      "$value": "#112840",
+      "$description": "Alternative surface — cards, elevated sections"
+    }
+  },
+  "text": {
+    "$type": "color",
+    "primary": {
+      "$value": "#E8F4FC",
+      "$description": "Primary text on dark surfaces"
+    },
+    "secondary": {
+      "$value": "#6EA8C4",
+      "$description": "Secondary / muted text"
+    },
+    "on-primary": {
+      "$value": "#E8F4FC",
+      "$description": "Foreground for content placed over primary-colored fills"
+    }
+  },
+  "border": {
+    "$type": "color",
+    "default": {
+      "$value": "#0D3050",
+      "$description": "Default border color"
+    }
+  },
+  "semantic": {
+    "$type": "color",
+    "success": {
+      "$value": "#1DE9B6",
+      "$description": "Success state"
+    },
+    "warning": {
+      "$value": "#FF9800",
+      "$description": "Warning state"
+    },
+    "error": {
+      "$value": "#FF5252",
+      "$description": "Error state"
+    },
+    "info": {
+      "$value": "#29B6F6",
+      "$description": "Info state"
+    }
+  },
+  "state": {
+    "foreground": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Foreground active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#29B6F666",
+        "$type": "color",
+        "$description": "Foreground disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    },
+    "fill": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Fill active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#29B6F666",
+        "$type": "color",
+        "$description": "Fill disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    }
+  }
+}

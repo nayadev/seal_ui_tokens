@@ -1,0 +1,178 @@
+{
+  "font-family": {
+    "sans": {
+      "$value": "Inter",
+      "$type": "fontFamily",
+      "$description": "Inter loaded via Google Fonts — the primary Seal UI typeface"
+    }
+  },
+  "constant": {
+    "line-height-multiplier": {
+      "$value": 1.2,
+      "$type": "number",
+      "$description": "Flutter's default line-height multiplier when TextStyle.height is null — TypographyTokens.kDefaultLineHeightMultiplier"
+    },
+    "body-font-size": {
+      "$value": "16px",
+      "$type": "fontSize",
+      "$description": "Default font size for body text, used as a fallback — TypographyTokens.kBodyFontSize"
+    },
+    "small-font-size": {
+      "$value": "14px",
+      "$type": "fontSize",
+      "$description": "Default font size for small/caption text, used as a fallback — TypographyTokens.kSmallFontSize"
+    },
+    "button-icon-size": {
+      "$value": "18px",
+      "$type": "dimension",
+      "$description": "Default icon size shared across all Seal button components — TypographyTokens.kDefaultButtonIconSize. Scale at runtime with context.dimension.scaled(18)"
+    }
+  },
+  "style": {
+    "$description": "All styles use scaleFactor=1.0 (mobile base). At runtime DefaultTypography(scaleFactor:) multiplies every fontSize: mobile=1.0×, tablet=1.125×, desktop=1.333×. lineHeight values are Flutter height ratios (relative to fontSize).",
+    "display": {
+      "$type": "typography",
+      "$description": "Large display text — hero sections. Matches shadcn h1Large. SealUI: display.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "48px",
+        "fontWeight": 800,
+        "letterSpacing": "-0.4px",
+        "lineHeight": 1.0
+      }
+    },
+    "headline": {
+      "$type": "typography",
+      "$description": "Primary section heading. Matches shadcn h1. SealUI: headline. lineHeight = 40/36 ≈ 1.111.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "36px",
+        "fontWeight": 800,
+        "letterSpacing": "-0.4px",
+        "lineHeight": 1.111
+      }
+    },
+    "heading": {
+      "$type": "typography",
+      "$description": "Secondary section heading. Matches shadcn h2. SealUI: heading. lineHeight = 36/30 = 1.2.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "30px",
+        "fontWeight": 600,
+        "letterSpacing": "-0.4px",
+        "lineHeight": 1.2
+      }
+    },
+    "title": {
+      "$type": "typography",
+      "$description": "Card or dialog headings. Matches shadcn h3. SealUI: title. lineHeight = 32/24 ≈ 1.333.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "24px",
+        "fontWeight": 600,
+        "letterSpacing": "-0.4px",
+        "lineHeight": 1.333
+      }
+    },
+    "subtitle": {
+      "$type": "typography",
+      "$description": "Subsection headings. Matches shadcn h4. SealUI: subtitle. lineHeight = 28/20 = 1.4.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "20px",
+        "fontWeight": 600,
+        "letterSpacing": "-0.4px",
+        "lineHeight": 1.4
+      }
+    },
+    "body-large": {
+      "$type": "typography",
+      "$description": "Emphasized body text, section intros. Matches shadcn large. SealUI: bodyLarge. lineHeight = 28/18 ≈ 1.556.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "18px",
+        "fontWeight": 600,
+        "letterSpacing": "0px",
+        "lineHeight": 1.556
+      }
+    },
+    "lead": {
+      "$type": "typography",
+      "$description": "Introductory paragraph text. Matches shadcn lead. SealUI: lead. Same size as subtitle but regular weight. lineHeight = 28/20 = 1.4.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "20px",
+        "fontWeight": 400,
+        "letterSpacing": "0px",
+        "lineHeight": 1.4
+      }
+    },
+    "body": {
+      "$type": "typography",
+      "$description": "Default readable paragraph text. Matches shadcn p. SealUI: body. lineHeight = 28/16 = 1.75.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "letterSpacing": "0px",
+        "lineHeight": 1.75
+      }
+    },
+    "small": {
+      "$type": "typography",
+      "$description": "Secondary / supporting information. Matches shadcn small. SealUI: small.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "14px",
+        "fontWeight": 500,
+        "letterSpacing": "0px",
+        "lineHeight": 1.0
+      }
+    },
+    "caption": {
+      "$type": "typography",
+      "$description": "Labels and metadata. Closest to shadcn muted. SealUI: caption. lineHeight = 20/14 ≈ 1.429.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "14px",
+        "fontWeight": 400,
+        "letterSpacing": "0px",
+        "lineHeight": 1.429
+      }
+    },
+    "blockquote": {
+      "$type": "typography",
+      "$description": "Italic body text. Derived from style.body: same size (16px), weight (400), but italic and compact lineHeight = 24/16 = 1.5. Matches shadcn blockquote.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "fontStyle": "italic",
+        "letterSpacing": "0px",
+        "lineHeight": 1.5
+      }
+    },
+    "table": {
+      "$type": "typography",
+      "$description": "Bold body text for table cells. Derived from style.body: same size (16px) but fontWeight=700 and compact lineHeight = 24/16 = 1.5. Matches shadcn table.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "16px",
+        "fontWeight": 700,
+        "letterSpacing": "0px",
+        "lineHeight": 1.5
+      }
+    },
+    "list": {
+      "$type": "typography",
+      "$description": "List item text. Derived from style.body: same size (16px) and weight (400) but compact lineHeight = 24/16 = 1.5, tighter than body (1.75) to suit list layouts. Matches shadcn list.",
+      "$value": {
+        "fontFamily": "{font-family.sans}",
+        "fontSize": "16px",
+        "fontWeight": 400,
+        "letterSpacing": "0px",
+        "lineHeight": 1.5
+      }
+    }
+  }
+}

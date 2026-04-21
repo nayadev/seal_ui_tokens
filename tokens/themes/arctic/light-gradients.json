@@ -1,0 +1,65 @@
+{
+  "gradient": {
+    "$description": "Arctic light-mode gradient tokens. Primary and accent gradients are identical to dark mode; surface gradients use opaque pastel tints for visibility on bright white surfaces.",
+    "primary": {
+      "$type": "gradient",
+      "$description": "Primary gradient — same as dark: ice blue to glacier cyan.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#29B6F6", "position": 0.0 },
+          { "color": "#26C6DA", "position": 1.0 }
+        ]
+      }
+    },
+    "accent": {
+      "$type": "gradient",
+      "$description": "Accent gradient — same as dark: glacier cyan to teal.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#00BCD4", "position": 0.0 },
+          { "color": "#26A69A", "position": 1.0 }
+        ]
+      }
+    },
+    "surface": {
+      "$type": "gradient",
+      "$description": "Surface gradient — opaque ice-blue pastel to glacier-cyan pastel. Visible and harmonious on white surfaces.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#E1F5FE", "position": 0.0 },
+          { "color": "#E0F7FA", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-primary": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with primary — ice-blue spectrum for primary-accented containers.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#E1F5FE", "position": 0.0 },
+          { "color": "#B3E5FC", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-accent": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with accent — cyan spectrum for accent-accented containers.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#E0F7FA", "position": 0.0 },
+          { "color": "#B2EBF2", "position": 1.0 }
+        ]
+      }
+    }
+  }
+}

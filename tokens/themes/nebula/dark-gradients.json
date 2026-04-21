@@ -1,0 +1,65 @@
+{
+  "gradient": {
+    "$description": "Nebula dark-mode gradient tokens — purple to blue, the primary visual identity of the Nebula theme.",
+    "primary": {
+      "$type": "gradient",
+      "$description": "Primary gradient — vibrant purple to periwinkle blue. Used on primary buttons and hero elements.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#8055E0", "position": 0.0 },
+          { "color": "#4A96E8", "position": 1.0 }
+        ]
+      }
+    },
+    "accent": {
+      "$type": "gradient",
+      "$description": "Accent gradient — primary shade to teal green.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#6340B8", "position": 0.0 },
+          { "color": "#32B88C", "position": 1.0 }
+        ]
+      }
+    },
+    "surface": {
+      "$type": "gradient",
+      "$description": "Surface gradient — subtle purple/blue sheen. Color(0x328055E0) and Color(0x324A96E8): alpha=0x32 (20% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#8055E032", "position": 0.0 },
+          { "color": "#4A96E832", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-primary": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with primary. Color(0x338055E0) and Color(0x336340B8): alpha=0x33 (20% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#8055E033", "position": 0.0 },
+          { "color": "#6340B833", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-accent": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with accent. Color(0x334A96E8) and Color(0x3332B88C): alpha=0x33 (20% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#4A96E833", "position": 0.0 },
+          { "color": "#32B88C33", "position": 1.0 }
+        ]
+      }
+    }
+  }
+}

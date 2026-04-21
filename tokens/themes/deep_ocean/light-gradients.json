@@ -1,0 +1,65 @@
+{
+  "gradient": {
+    "$description": "Deep Ocean light-mode gradient tokens. Primary and accent gradients are identical to dark mode; surface gradients use opaque navy/teal pastel tints for visibility on bright surfaces.",
+    "primary": {
+      "$type": "gradient",
+      "$description": "Primary gradient — same as dark: navy to cyan glow.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#1976D2", "position": 0.0 },
+          { "color": "#00E5FF", "position": 1.0 }
+        ]
+      }
+    },
+    "accent": {
+      "$type": "gradient",
+      "$description": "Accent gradient — same as dark: deep navy to light cyan.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#0D47A1", "position": 0.0 },
+          { "color": "#40C4FF", "position": 1.0 }
+        ]
+      }
+    },
+    "surface": {
+      "$type": "gradient",
+      "$description": "Surface gradient — opaque light navy to light teal pastel. Visible on white/off-white surfaces.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#E3F2FD", "position": 0.0 },
+          { "color": "#E0F5FA", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-primary": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with primary — blue spectrum light tints for primary-accented containers.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#E3F2FD", "position": 0.0 },
+          { "color": "#BBDEFB", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-accent": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with accent — teal spectrum light tints for accent-accented containers.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#E0F5FA", "position": 0.0 },
+          { "color": "#B2EBF2", "position": 1.0 }
+        ]
+      }
+    }
+  }
+}

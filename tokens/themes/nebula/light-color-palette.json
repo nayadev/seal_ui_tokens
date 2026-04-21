@@ -1,0 +1,114 @@
+{
+  "brand": {
+    "$type": "color",
+    "primary": {
+      "$value": "#7B4FD4",
+      "$description": "Purple — primary brand color on light surfaces (slightly darker for contrast)"
+    },
+    "primary-tint": {
+      "$value": "#9B6DFF",
+      "$description": "Lighter tint of the Nebula light primary"
+    },
+    "primary-shade": {
+      "$value": "#5B34A6",
+      "$description": "Darker shade of the Nebula light primary"
+    }
+  },
+  "accent": {
+    "$type": "color",
+    "accent": {
+      "$value": "#2DB88A",
+      "$description": "Teal green — primary accent on light surfaces"
+    },
+    "accent-secondary": {
+      "$value": "#3D8BDF",
+      "$description": "Secondary accent — periwinkle blue on light surfaces"
+    },
+    "on-accent": {
+      "$value": "#FFFFFF",
+      "$description": "Foreground for content placed over accent-colored surfaces"
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "background": {
+      "$value": "#F5F2FF",
+      "$description": "Main light background — soft lavender tint"
+    },
+    "surface": {
+      "$value": "#FFFFFF",
+      "$description": "Primary light surface"
+    },
+    "surface-alt": {
+      "$value": "#EDE8F5",
+      "$description": "Alternative surface — cards, elevated sections"
+    }
+  },
+  "text": {
+    "$type": "color",
+    "primary": {
+      "$value": "#1A1A2E",
+      "$description": "Primary text on light surfaces — matches dark background for depth"
+    },
+    "secondary": {
+      "$value": "#6B6880",
+      "$description": "Secondary / muted text"
+    },
+    "on-primary": {
+      "$value": "#F0ECF9",
+      "$description": "Foreground for content placed over primary-colored fills"
+    }
+  },
+  "border": {
+    "$type": "color",
+    "default": {
+      "$value": "#D8D3E8",
+      "$description": "Default border color"
+    }
+  },
+  "semantic": {
+    "$type": "color",
+    "success": {
+      "$value": "#2DB88A",
+      "$description": "Success state"
+    },
+    "warning": {
+      "$value": "#E6A040",
+      "$description": "Warning state"
+    },
+    "error": {
+      "$value": "#E04564",
+      "$description": "Error state"
+    },
+    "info": {
+      "$value": "#3D8BDF",
+      "$description": "Info state"
+    }
+  },
+  "state": {
+    "foreground": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Foreground active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#7B4FD466",
+        "$type": "color",
+        "$description": "Foreground disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    },
+    "fill": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Fill active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#7B4FD466",
+        "$type": "color",
+        "$description": "Fill disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    }
+  }
+}

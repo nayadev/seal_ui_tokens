@@ -1,0 +1,65 @@
+{
+  "gradient": {
+    "$description": "Terminal dark-mode gradient tokens. Evoke CRT phosphor screens: cyan sweeping into deep teal-blue, phosphor green bleeding into cyan.",
+    "primary": {
+      "$type": "gradient",
+      "$description": "Primary gradient — cyan to deep teal-blue, like a beam sweeping across a phosphor screen. Uses horizontal direction (centerLeft → centerRight).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "center-left", "to": "center-right" },
+        "stops": [
+          { "color": "#00CC99", "position": 0.0 },
+          { "color": "#005F6A", "position": 1.0 }
+        ]
+      }
+    },
+    "accent": {
+      "$type": "gradient",
+      "$description": "Accent gradient — teal-gray to deep teal, the accent identity sweeping into the terminal backdrop.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#7A9A9A", "position": 0.0 },
+          { "color": "#3D5F5F", "position": 1.0 }
+        ]
+      }
+    },
+    "surface": {
+      "$type": "gradient",
+      "$description": "Surface gradient — subtle dark phosphor sheen. Color(0x2800CC99) and Color(0x28005F6A): alpha=0x28 (16% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#00CC9928", "position": 0.0 },
+          { "color": "#005F6A28", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-primary": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with primary — cyan phosphor tint for primary-accented containers. Color(0x3300CC99) and Color(0x33009970): alpha=0x33 (20% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#00CC9933", "position": 0.0 },
+          { "color": "#00997033", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-accent": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with accent — dark gray tint for accent-accented containers. Color(0x287A9A9A) and Color(0x283D5F5F): alpha=0x28 (16% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#7A9A9A28", "position": 0.0 },
+          { "color": "#3D5F5F28", "position": 1.0 }
+        ]
+      }
+    }
+  }
+}

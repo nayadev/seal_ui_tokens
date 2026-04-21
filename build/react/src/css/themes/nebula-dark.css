@@ -1,0 +1,28 @@
+.nebula-dark {
+  --seal-brand-primary: #8055e0;
+  --seal-brand-primary-tint: #9b6dff;
+  --seal-brand-primary-shade: #6340b8;
+  --seal-accent-accent: #32b88c;
+  --seal-accent-accent-secondary: #4a96e8;
+  --seal-accent-on-accent: #f0ecf9;
+  --seal-surface-background: #0f0f1a;
+  --seal-surface-surface: #1a1a2e;
+  --seal-surface-surface-alt: #252542;
+  --seal-text-primary: #f0ecf9;
+  --seal-text-secondary: #9e9bb3;
+  --seal-text-on-primary: #f0ecf9;
+  --seal-border-default: #2e2e4a;
+  --seal-semantic-success: #4ddeb0;
+  --seal-semantic-warning: #ffbe6a;
+  --seal-semantic-error: #ff6b8a;
+  --seal-semantic-info: #4a96e8;
+  --seal-state-foreground-active: #8055e0;
+  --seal-state-foreground-disabled: rgba(128, 85, 224, 0.4);
+  --seal-state-fill-active: #8055e0;
+  --seal-state-fill-disabled: rgba(128, 85, 224, 0.4);
+  --seal-gradient-primary: linear-gradient(to bottom right, #8055E0 0%, #4A96E8 100%);
+  --seal-gradient-accent: linear-gradient(to bottom right, #6340B8 0%, #32B88C 100%);
+  --seal-gradient-surface: linear-gradient(to bottom right, #8055E032 0%, #4A96E832 100%);
+  --seal-gradient-surface-primary: linear-gradient(to bottom right, #8055E033 0%, #6340B833 100%);
+  --seal-gradient-surface-accent: linear-gradient(to bottom right, #4A96E833 0%, #32B88C33 100%);
+}

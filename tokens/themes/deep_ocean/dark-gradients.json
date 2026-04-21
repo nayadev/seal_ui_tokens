@@ -1,0 +1,65 @@
+{
+  "gradient": {
+    "$description": "Deep Ocean dark-mode gradient tokens — deep navy to cyan glow, evoking luminous ocean depths.",
+    "primary": {
+      "$type": "gradient",
+      "$description": "Primary gradient — navy to cyan glow. Used on primary buttons and hero elements.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#1976D2", "position": 0.0 },
+          { "color": "#00E5FF", "position": 1.0 }
+        ]
+      }
+    },
+    "accent": {
+      "$type": "gradient",
+      "$description": "Accent gradient — deep navy to light cyan.",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#0D47A1", "position": 0.0 },
+          { "color": "#40C4FF", "position": 1.0 }
+        ]
+      }
+    },
+    "surface": {
+      "$type": "gradient",
+      "$description": "Surface gradient — very subtle navy/cyan sheen. Color(0x281976D2) and Color(0x2800E5FF): alpha=0x28 (16% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#1976D228", "position": 0.0 },
+          { "color": "#00E5FF28", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-primary": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with primary. Color(0x301976D2) and Color(0x300D47A1): alpha=0x30 (19% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#1976D230", "position": 0.0 },
+          { "color": "#0D47A130", "position": 1.0 }
+        ]
+      }
+    },
+    "surface-accent": {
+      "$type": "gradient",
+      "$description": "Surface gradient tinted with accent. Color(0x3000E5FF) and Color(0x3040C4FF): alpha=0x30 (19% opacity).",
+      "$value": {
+        "gradientType": "linear",
+        "direction": { "from": "top-left", "to": "bottom-right" },
+        "stops": [
+          { "color": "#00E5FF30", "position": 0.0 },
+          { "color": "#40C4FF30", "position": 1.0 }
+        ]
+      }
+    }
+  }
+}

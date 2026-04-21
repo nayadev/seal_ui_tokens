@@ -1,0 +1,34 @@
+{
+  "radius": {
+    "$type": "dimension",
+    "$description": "Seal UI border-radius scale. Use SealRadius constants in Flutter code.",
+    "none": {
+      "$value": "0px",
+      "$description": "No rounding — SealRadius.none"
+    },
+    "xs": {
+      "$value": "4px",
+      "$description": "Subtle rounding — SealRadius.xs"
+    },
+    "sm": {
+      "$value": "8px",
+      "$description": "Default rounding — SealRadius.sm"
+    },
+    "md": {
+      "$value": "12px",
+      "$description": "Medium rounding — SealRadius.md"
+    },
+    "lg": {
+      "$value": "16px",
+      "$description": "Large rounding — cards, dialogs — SealRadius.lg"
+    },
+    "xl": {
+      "$value": "24px",
+      "$description": "Extra-large rounding — SealRadius.xl"
+    },
+    "full": {
+      "$value": "9999px",
+      "$description": "Pill shape — guarantees fully circular corners regardless of element height — SealRadius.full (Dart value: 999px)"
+    }
+  }
+}

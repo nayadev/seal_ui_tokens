@@ -1,0 +1,37 @@
+{
+  "primitive": {
+    "$type": "color",
+    "white": {
+      "$value": "#FFFFFF",
+      "$description": "Pure white — ColorX.white"
+    },
+    "black": {
+      "$value": "#000000",
+      "$description": "Pure black — ColorX.black"
+    },
+    "transparent": {
+      "$value": "#00000000",
+      "$description": "Fully transparent — ColorX.transparent"
+    },
+    "red": {
+      "$value": "#F44336",
+      "$description": "Red semantic primitive — ColorX.red"
+    },
+    "teal": {
+      "$value": "#009688",
+      "$description": "Teal semantic primitive — ColorX.teal"
+    },
+    "orange": {
+      "$value": "#FF9800",
+      "$description": "Orange semantic primitive — ColorX.orange"
+    },
+    "indigo": {
+      "$value": "#3F51B5",
+      "$description": "Indigo semantic primitive — ColorX.indigo"
+    },
+    "pink": {
+      "$value": "#E91E63",
+      "$description": "Pink semantic primitive — ColorX.pink"
+    }
+  }
+}

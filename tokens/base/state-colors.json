@@ -1,0 +1,9 @@
+{
+  "state": {
+    "disabled-opacity": {
+      "$value": 0.4,
+      "$type": "number",
+      "$description": "Default opacity multiplier applied to a base color to produce its disabled variant — SealStateColor.kDefaultDisabledOpacity. Expressed as hex alpha channel: 0x66 (floor(0.4 × 255) = 102 = 0x66). Used in every theme palette's state.foreground.disabled and state.fill.disabled tokens."
+    }
+  }
+}

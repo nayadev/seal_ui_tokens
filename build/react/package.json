@@ -1,0 +1,32 @@
+{
+  "name": "@sealui/tokens",
+  "version": "0.0.1",
+  "description": "Design tokens for the SealUI design system.",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./css/base": "./src/css/base.css",
+    "./css/themes/*": "./src/css/themes/*.css",
+    "./tailwind": {
+      "import": "./dist/tailwind/index.mjs",
+      "require": "./dist/tailwind/index.js",
+      "types": "./dist/tailwind/index.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts src/tailwind/index.ts --format esm,cjs --dts --out-dir dist"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "devDependencies": {
+    "tsup": "*",
+    "typescript": "*"
+  }
+}

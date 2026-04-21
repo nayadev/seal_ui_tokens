@@ -1,0 +1,28 @@
+.nebula-light {
+  --seal-brand-primary: #7b4fd4;
+  --seal-brand-primary-tint: #9b6dff;
+  --seal-brand-primary-shade: #5b34a6;
+  --seal-accent-accent: #2db88a;
+  --seal-accent-accent-secondary: #3d8bdf;
+  --seal-accent-on-accent: #ffffff;
+  --seal-surface-background: #f5f2ff;
+  --seal-surface-surface: #ffffff;
+  --seal-surface-surface-alt: #ede8f5;
+  --seal-text-primary: #1a1a2e;
+  --seal-text-secondary: #6b6880;
+  --seal-text-on-primary: #f0ecf9;
+  --seal-border-default: #d8d3e8;
+  --seal-semantic-success: #2db88a;
+  --seal-semantic-warning: #e6a040;
+  --seal-semantic-error: #e04564;
+  --seal-semantic-info: #3d8bdf;
+  --seal-state-foreground-active: #7b4fd4;
+  --seal-state-foreground-disabled: rgba(123, 79, 212, 0.4);
+  --seal-state-fill-active: #7b4fd4;
+  --seal-state-fill-disabled: rgba(123, 79, 212, 0.4);
+  --seal-gradient-primary: linear-gradient(to bottom right, #8055E0 0%, #4A96E8 100%);
+  --seal-gradient-accent: linear-gradient(to bottom right, #6340B8 0%, #32B88C 100%);
+  --seal-gradient-surface: linear-gradient(to bottom right, #EDE8FF 0%, #E3EFFF 100%);
+  --seal-gradient-surface-primary: linear-gradient(to bottom right, #EAE3FF 0%, #E5DCFF 100%);
+  --seal-gradient-surface-accent: linear-gradient(to bottom right, #DAF5EE 0%, #E0EFFF 100%);
+}

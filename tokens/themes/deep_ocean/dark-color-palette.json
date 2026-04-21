@@ -1,0 +1,114 @@
+{
+  "brand": {
+    "$type": "color",
+    "primary": {
+      "$value": "#1976D2",
+      "$description": "Navy blue — primary brand color"
+    },
+    "primary-tint": {
+      "$value": "#42A5F5",
+      "$description": "Lighter tint of the Deep Ocean primary"
+    },
+    "primary-shade": {
+      "$value": "#0D47A1",
+      "$description": "Darker shade of the Deep Ocean primary"
+    }
+  },
+  "accent": {
+    "$type": "color",
+    "accent": {
+      "$value": "#00E5FF",
+      "$description": "Cyan glow — primary accent"
+    },
+    "accent-secondary": {
+      "$value": "#40C4FF",
+      "$description": "Secondary accent — lighter cyan"
+    },
+    "on-accent": {
+      "$value": "#E8F4FC",
+      "$description": "Foreground for content placed over accent-colored surfaces"
+    }
+  },
+  "surface": {
+    "$type": "color",
+    "background": {
+      "$value": "#020B18",
+      "$description": "Deep midnight — main dark background"
+    },
+    "surface": {
+      "$value": "#071524",
+      "$description": "Primary dark surface"
+    },
+    "surface-alt": {
+      "$value": "#0D2137",
+      "$description": "Alternative surface — cards, elevated sections"
+    }
+  },
+  "text": {
+    "$type": "color",
+    "primary": {
+      "$value": "#E8F4FC",
+      "$description": "Primary text on dark surfaces"
+    },
+    "secondary": {
+      "$value": "#6EA8C4",
+      "$description": "Secondary / muted text"
+    },
+    "on-primary": {
+      "$value": "#E8F4FC",
+      "$description": "Foreground for content placed over primary-colored fills"
+    }
+  },
+  "border": {
+    "$type": "color",
+    "default": {
+      "$value": "#0D2B45",
+      "$description": "Default border color"
+    }
+  },
+  "semantic": {
+    "$type": "color",
+    "success": {
+      "$value": "#1DE9B6",
+      "$description": "Success state"
+    },
+    "warning": {
+      "$value": "#FF9800",
+      "$description": "Warning state"
+    },
+    "error": {
+      "$value": "#FF5252",
+      "$description": "Error state"
+    },
+    "info": {
+      "$value": "#40C4FF",
+      "$description": "Info state"
+    }
+  },
+  "state": {
+    "foreground": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Foreground active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#1976D266",
+        "$type": "color",
+        "$description": "Foreground disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    },
+    "fill": {
+      "active": {
+        "$value": "{brand.primary}",
+        "$type": "color",
+        "$description": "Fill active state — equals brand.primary. SealStateColor(primary).active"
+      },
+      "disabled": {
+        "$value": "#1976D266",
+        "$type": "color",
+        "$description": "Fill disabled state — brand.primary at 40% opacity. SealStateColor(primary).disabled: alpha = floor(0.4 × 255) = 0x66"
+      }
+    }
+  }
+}

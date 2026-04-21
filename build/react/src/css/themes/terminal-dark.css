@@ -1,0 +1,28 @@
+.terminal-dark {
+  --seal-brand-primary: #00cc99;
+  --seal-brand-primary-tint: #33d9aa;
+  --seal-brand-primary-shade: #009970;
+  --seal-accent-accent: #7a9a9a;
+  --seal-accent-accent-secondary: #556b6b;
+  --seal-accent-on-accent: #d4fff8;
+  --seal-surface-background: #060c0c;
+  --seal-surface-surface: #0c1a1a;
+  --seal-surface-surface-alt: #122222;
+  --seal-text-primary: #d4fff8;
+  --seal-text-secondary: #6b7e7e;
+  --seal-text-on-primary: #d4fff8;
+  --seal-border-default: #143030;
+  --seal-semantic-success: #39ff14;
+  --seal-semantic-warning: #ffb627;
+  --seal-semantic-error: #ff3355;
+  --seal-semantic-info: #00b8d9;
+  --seal-state-foreground-active: #00cc99;
+  --seal-state-foreground-disabled: rgba(0, 204, 153, 0.4);
+  --seal-state-fill-active: #00cc99;
+  --seal-state-fill-disabled: rgba(0, 204, 153, 0.4);
+  --seal-gradient-primary: linear-gradient(to bottom right, #00CC99 0%, #005F6A 100%);
+  --seal-gradient-accent: linear-gradient(to bottom right, #7A9A9A 0%, #3D5F5F 100%);
+  --seal-gradient-surface: linear-gradient(to bottom right, #00CC9928 0%, #005F6A28 100%);
+  --seal-gradient-surface-primary: linear-gradient(to bottom right, #00CC9933 0%, #00997033 100%);
+  --seal-gradient-surface-accent: linear-gradient(to bottom right, #7A9A9A28 0%, #3D5F5F28 100%);
+}
