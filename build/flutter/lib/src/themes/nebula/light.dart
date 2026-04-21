@@ -1,6 +1,6 @@
 // AUTO-GENERATED — DO NOT EDIT
 // ignore_for_file: constant_identifier_names
-import 'dart:ui';
+import 'package:flutter/painting.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class SealNebulaLightTokens {
@@ -27,9 +27,64 @@ class SealNebulaLightTokens {
   static const Color stateForegroundDisabled = Color(0x667B4FD4);
   static const Color stateFillActive = Color(0xFF7B4FD4);
   static const Color stateFillDisabled = Color(0x667B4FD4);
-  // gradient: gradientPrimary (composite — see token JSON)
-  // gradient: gradientAccent (composite — see token JSON)
-  // gradient: gradientSurface (composite — see token JSON)
-  // gradient: gradientSurfacePrimary (composite — see token JSON)
-  // gradient: gradientSurfaceAccent (composite — see token JSON)
+  static const LinearGradient gradientPrimary = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFF8055E0),
+      Color(0xFF4A96E8),
+    ],
+    stops: [
+      0.0,
+      1.0,
+    ],
+  );
+  static const LinearGradient gradientAccent = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFF6340B8),
+      Color(0xFF32B88C),
+    ],
+    stops: [
+      0.0,
+      1.0,
+    ],
+  );
+  static const LinearGradient gradientSurface = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFFEDE8FF),
+      Color(0xFFE3EFFF),
+    ],
+    stops: [
+      0.0,
+      1.0,
+    ],
+  );
+  static const LinearGradient gradientSurfacePrimary = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFFEAE3FF),
+      Color(0xFFE5DCFF),
+    ],
+    stops: [
+      0.0,
+      1.0,
+    ],
+  );
+  static const LinearGradient gradientSurfaceAccent = LinearGradient(
+    begin: Alignment.topLeft,
+    end: Alignment.bottomRight,
+    colors: [
+      Color(0xFFDAF5EE),
+      Color(0xFFE0EFFF),
+    ],
+    stops: [
+      0.0,
+      1.0,
+    ],
+  );
 }

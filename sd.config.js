@@ -56,6 +56,61 @@ function tokenValue(token) {
   return token.value ?? token.$value;
 }
 
+// Flutter Alignment mapping (summary A4 + Note 2)
+const alignmentMap = {
+  'top-left':     'Alignment.topLeft',
+  'top-right':    'Alignment.topRight',
+  'bottom-left':  'Alignment.bottomLeft',
+  'bottom-right': 'Alignment.bottomRight',
+  'top':          'Alignment.topCenter',
+  'bottom':       'Alignment.bottomCenter',
+  'center-left':  'Alignment.centerLeft',
+  'center-right': 'Alignment.centerRight',
+  'center':       'Alignment.center',
+};
+
+// Ensures a number is serialized as a Dart double literal (e.g. 1 → 1.0)
+function dartDouble(n) {
+  const f = Number(n);
+  return Number.isInteger(f) ? `${f}.0` : String(f);
+}
+
+function serializeGradientDart(name, val) {
+  if (!val || !val.stops) return [`  // gradient: ${name} (missing stops)`];
+  const begin  = alignmentMap[val.direction?.from] ?? 'Alignment.topLeft';
+  const end    = alignmentMap[val.direction?.to]   ?? 'Alignment.bottomRight';
+  const colors = val.stops.map(s => `      ${hexToFlutterColor(s.color)},`);
+  const stops  = val.stops.map(s => `      ${dartDouble(s.position)},`);
+  return [
+    `  static const LinearGradient ${name} = LinearGradient(`,
+    `    begin: ${begin},`,
+    `    end: ${end},`,
+    `    colors: [`,
+    ...colors,
+    `    ],`,
+    `    stops: [`,
+    ...stops,
+    `    ],`,
+    `  );`,
+  ];
+}
+
+function serializeTypographyDart(name, val) {
+  if (!val || typeof val !== 'object') return [`  // typography: ${name}`];
+  const props = [];
+  if (val.fontFamily    !== undefined) props.push(`    fontFamily: '${val.fontFamily}',`);
+  if (val.fontSize      !== undefined) props.push(`    fontSize: ${dartDouble(pxToDouble(String(val.fontSize)))},`);
+  if (val.fontWeight    !== undefined) props.push(`    fontWeight: FontWeight.w${val.fontWeight},`);
+  if (val.letterSpacing !== undefined) props.push(`    letterSpacing: ${dartDouble(pxToDouble(String(val.letterSpacing)))},`);
+  if (val.lineHeight    !== undefined) props.push(`    height: ${dartDouble(val.lineHeight)},`);
+  if (val.fontStyle === 'italic')      props.push(`    fontStyle: FontStyle.italic,`);
+  return [
+    `  static const TextStyle ${name} = TextStyle(`,
+    ...props,
+    `  );`,
+  ];
+}
+
 // ─── Custom Transforms ────────────────────────────────────────────────────────
 
 StyleDictionary.registerTransform({
@@ -103,7 +158,7 @@ StyleDictionary.registerFormat({
     const lines = [
       '// AUTO-GENERATED — DO NOT EDIT',
       '// ignore_for_file: constant_identifier_names',
-      "import 'dart:ui';",
+      "import 'package:flutter/painting.dart';",
       '',
       '// ignore: avoid_classes_with_only_static_members',
       `class ${className} {`,
@@ -114,7 +169,7 @@ StyleDictionary.registerFormat({
     for (const token of dictionary.allTokens) {
       const name = token.name;
       const type = tokenType(token);
-      const val = tokenValue(token);
+      const val  = tokenValue(token);
 
       if (type === 'color') {
         lines.push(`  static const Color ${name} = ${val};`);
@@ -124,8 +179,10 @@ StyleDictionary.registerFormat({
         lines.push(`  static const double ${name} = ${val};`);
       } else if (type === 'fontFamily') {
         lines.push(`  static const String ${name} = '${val}';`);
-      } else if (type === 'gradient' || type === 'typography') {
-        lines.push(`  // ${type}: ${name} (composite — see token JSON)`);
+      } else if (type === 'gradient') {
+        lines.push(...serializeGradientDart(name, val));
+      } else if (type === 'typography') {
+        lines.push(...serializeTypographyDart(name, val));
       } else {
         lines.push(`  static const String ${name} = ${JSON.stringify(String(val))};`);
       }

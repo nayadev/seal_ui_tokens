@@ -1,6 +1,6 @@
 // AUTO-GENERATED — DO NOT EDIT
 // ignore_for_file: constant_identifier_names
-import 'dart:ui';
+import 'package:flutter/painting.dart';
 
 // ignore: avoid_classes_with_only_static_members
 class SealBaseTokens {
@@ -36,17 +36,96 @@ class SealBaseTokens {
   static const double constantBodyFontSize = 16;
   static const double constantSmallFontSize = 14;
   static const double constantButtonIconSize = 18;
-  // typography: styleDisplay (composite — see token JSON)
-  // typography: styleHeadline (composite — see token JSON)
-  // typography: styleHeading (composite — see token JSON)
-  // typography: styleTitle (composite — see token JSON)
-  // typography: styleSubtitle (composite — see token JSON)
-  // typography: styleBodyLarge (composite — see token JSON)
-  // typography: styleLead (composite — see token JSON)
-  // typography: styleBody (composite — see token JSON)
-  // typography: styleSmall (composite — see token JSON)
-  // typography: styleCaption (composite — see token JSON)
-  // typography: styleBlockquote (composite — see token JSON)
-  // typography: styleTable (composite — see token JSON)
-  // typography: styleList (composite — see token JSON)
+  static const TextStyle styleDisplay = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 48.0,
+    fontWeight: FontWeight.w800,
+    letterSpacing: -0.4,
+    height: 1.0,
+  );
+  static const TextStyle styleHeadline = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 36.0,
+    fontWeight: FontWeight.w800,
+    letterSpacing: -0.4,
+    height: 1.111,
+  );
+  static const TextStyle styleHeading = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 30.0,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -0.4,
+    height: 1.2,
+  );
+  static const TextStyle styleTitle = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 24.0,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -0.4,
+    height: 1.333,
+  );
+  static const TextStyle styleSubtitle = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 20.0,
+    fontWeight: FontWeight.w600,
+    letterSpacing: -0.4,
+    height: 1.4,
+  );
+  static const TextStyle styleBodyLarge = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 18.0,
+    fontWeight: FontWeight.w600,
+    letterSpacing: 0.0,
+    height: 1.556,
+  );
+  static const TextStyle styleLead = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 20.0,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.0,
+    height: 1.4,
+  );
+  static const TextStyle styleBody = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 16.0,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.0,
+    height: 1.75,
+  );
+  static const TextStyle styleSmall = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 14.0,
+    fontWeight: FontWeight.w500,
+    letterSpacing: 0.0,
+    height: 1.0,
+  );
+  static const TextStyle styleCaption = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 14.0,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.0,
+    height: 1.429,
+  );
+  static const TextStyle styleBlockquote = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 16.0,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.0,
+    height: 1.5,
+    fontStyle: FontStyle.italic,
+  );
+  static const TextStyle styleTable = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 16.0,
+    fontWeight: FontWeight.w700,
+    letterSpacing: 0.0,
+    height: 1.5,
+  );
+  static const TextStyle styleList = TextStyle(
+    fontFamily: 'Inter',
+    fontSize: 16.0,
+    fontWeight: FontWeight.w400,
+    letterSpacing: 0.0,
+    height: 1.5,
+  );
 }
