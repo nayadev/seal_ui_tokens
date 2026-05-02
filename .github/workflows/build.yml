@@ -28,3 +28,12 @@ jobs:
 
       - name: Build all platforms
         run: npm run build
+
+      - name: Check build artifacts are up to date
+        run: |
+          if ! git diff --exit-code build/; then
+            echo ""
+            echo "Build artifacts are out of date."
+            echo "Run 'npm run build' locally and commit the updated files before pushing."
+            exit 1
+          fi
