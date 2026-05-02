@@ -165,9 +165,9 @@ Architectural decisions are documented as ADRs in [`docs/adr/`](./docs/adr/).
 
 ### Build smoke test
 
-Every push to `main` and every pull request triggers a build smoke test that runs `npm run build` and verifies that the key output files are present. This catches broken token definitions or transformer regressions before they reach consumers.
+Every pull request triggers a build smoke test that runs `npm run build` and verifies that the key output files are present. This catches broken token definitions or transformer regressions before they reach consumers.
 
-Workflow: `.github/workflows/build.yml`
+Workflow: `.github/workflows/check.yml`
 
 ---
 
