@@ -157,12 +157,7 @@ Generated files in `build/flutter/` and `build/react/src/` are committed to git.
 
 ## Architecture Decisions
 
-Architectural decisions are documented as ADRs in [`docs/adr/`](./docs/adr/). Recorded decisions:
-
-- **ADR-0001** — Adopt shadcn as the cross-platform design system foundation for both React and Flutter.
-- **ADR-0002** — Maintain a multirepo architecture (tokens, Flutter, React as separate repositories) over a monorepo.
-- **ADR-0003** — Use Style Dictionary v4 with the W3C DTCG JSON format as the token standard.
-- **ADR-0004** — Adopt Lucide Icons as the cross-platform icon library, with platform-specific packages on each side.
+Architectural decisions are documented as ADRs in [`docs/adr/`](./docs/adr/).
 
 ---
 
