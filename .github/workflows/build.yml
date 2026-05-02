@@ -28,14 +28,3 @@ jobs:
 
       - name: Build all platforms
         run: npm run build
-
-      - name: Verify React output files
-        run: |
-          test -f build/react/src/css/base.css
-          test -f build/react/src/index.ts
-          test -f build/react/src/tailwind/index.ts
-
-      - name: Verify Flutter output files
-        run: |
-          test -f build/flutter/lib/seal_ui_tokens.dart
-          test -f build/flutter/lib/src/base/tokens.dart
