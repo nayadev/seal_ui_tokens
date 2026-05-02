@@ -4,7 +4,7 @@
 
 [![License](https://img.shields.io/badge/license-MIT-32b88c)](./LICENSE)
 [![Style Dictionary](https://img.shields.io/badge/Style_Dictionary-v4-7c3aed)](https://styledictionary.com)
-[![Build](https://github.com/nayadev/seal_ui_tokens/actions/workflows/build.yml/badge.svg)](https://github.com/nayadev/seal_ui_tokens/actions/workflows/build.yml)
+[![Check](https://github.com/nayadev/seal_ui_tokens/actions/workflows/check.yml/badge.svg)](https://github.com/nayadev/seal_ui_tokens/actions/workflows/check.yml)
 
 ---
 
