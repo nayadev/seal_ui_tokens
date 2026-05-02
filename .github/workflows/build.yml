@@ -1,0 +1,38 @@
+name: Build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  build:
+    name: Build tokens
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build all platforms
+        run: npm run build
+
+      - name: Verify React output files
+        run: |
+          test -f build/react/src/css/base.css
+          test -f build/react/src/index.ts
+          test -f build/react/src/tailwind/index.ts
+
+      - name: Verify Flutter output files
+        run: |
+          test -f build/flutter/lib/seal_ui_tokens.dart
+          test -f build/flutter/lib/src/base/tokens.dart
