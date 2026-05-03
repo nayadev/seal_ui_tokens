@@ -27,6 +27,7 @@ We will use Style Dictionary v4 with the W3C Design Tokens Community Group (DTCG
   - Future-proofing as the industry converges on this format
 
 All token JSON files in the `tokens/` directory follow the DTCG format where each token has:
+
 - `$value`: The actual token value (color, size, etc.)
 - `$type`: The token category (color, dimension, typography, etc.)
 - Optional `$description`: Documentation for the token
@@ -34,6 +35,7 @@ All token JSON files in the `tokens/` directory follow the DTCG format where eac
 ## Consequences
 
 **Positive:**
+
 - Single source of truth for all design tokens
 - Automatic generation of platform-specific outputs (Dart, TypeScript, CSS, Tailwind)
 - Interoperability with design tools that support W3C DTCG format
@@ -42,6 +44,7 @@ All token JSON files in the `tokens/` directory follow the DTCG format where eac
 - Clear separation between token definitions and platform-specific implementations
 
 **Negative:**
+
 - Build step required before consuming tokens (mitigated by committing generated files)
 - Learning curve for Style Dictionary configuration
 - Generated files must be regenerated when tokens change (addressed by commit workflow)

@@ -20,12 +20,34 @@
     "build": "node sd.config.js",
     "build:flutter": "node sd.config.js --platform flutter",
     "build:react": "node sd.config.js --platform react",
-    "clean": "rm -rf build/flutter/lib build/react/src build/react/dist"
+    "clean": "rm -rf build/flutter/lib build/react/src build/react/dist",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,css}": [
+      "prettier --write"
+    ]
   },
   "dependencies": {
     "style-dictionary": "^4.3.3"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.5.3",
+    "@commitlint/config-conventional": "^20.5.3",
+    "@eslint/js": "^10.0.1",
+    "eslint": "^10.3.0",
+    "eslint-plugin-import": "^2.32.0",
+    "globals": "^17.6.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.4.0",
+    "prettier": "^3.8.3",
     "tsup": "^8.3.0",
     "typescript": "^5.4.5"
   }

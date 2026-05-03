@@ -19,11 +19,13 @@ The SealUI design system consists of three interrelated packages: token generati
 ## Decision
 
 We will maintain a multirepo architecture with three separate repositories:
+
 - `seal_ui_tokens`: Source of truth for design tokens
 - `seal_ui_flutter`: Flutter component library consuming tokens
 - `seal_ui_react`: React component library consuming tokens
 
 This approach provides:
+
 - Independent versioning for each package
 - Focused git history per repository
 - Ability to publish and consume each package independently
@@ -33,6 +35,7 @@ This approach provides:
 ## Consequences
 
 **Positive:**
+
 - Independent release cycles for tokens, Flutter, and React packages
 - Simplified development workflows with focused repositories
 - Easier to understand contribution paths for newcomers
@@ -40,6 +43,7 @@ This approach provides:
 - Each repo can opt into different publishing strategies
 
 **Negative:**
+
 - Cross-repository changes require coordinated commits across multiple repos
 - Duplication of common configurations (linting, testing, etc.)
 - Slightly more complex dependency management when consuming
@@ -47,7 +51,8 @@ This approach provides:
 
 **Current Status:**
 All packages are currently consumed via git references:
+
 - `seal_ui_tokens` via git subpath in `pubspec.yaml` and package.json
 - `seal_ui_flutter` via git dependency in `pubspec.yaml`
 - `seal_ui_react` via git dependency in package.json
-NPM/Pub.dev publication is being considered but is not a current constraint driving architecture decisions.
+  NPM/Pub.dev publication is being considered but is not a current constraint driving architecture decisions.

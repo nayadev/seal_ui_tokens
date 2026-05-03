@@ -19,6 +19,7 @@ The SealUI design system needs a consistent component foundation across Flutter 
 ## Decision
 
 We will adopt shadcn as the design system foundation for both Flutter and React platforms. For React, we use shadcn/ui directly. For Flutter, we use the shadcn_ui package available on pub.dev, which implements the same design principles in Dart. This approach gives us:
+
 - Shared visual language (color usage, spacing, typography, border radii)
 - Consistent component APIs and composition patterns
 - Platform-native implementations that follow Flutter and React best practices
@@ -27,6 +28,7 @@ We will adopt shadcn as the design system foundation for both Flutter and React 
 ## Consequences
 
 **Positive:**
+
 - Visual consistency across Flutter and React applications
 - Reduced design drift between platforms
 - Faster development through shared design principles
@@ -34,6 +36,7 @@ We will adopt shadcn as the design system foundation for both Flutter and React 
 - Clear migration path if we need to evolve the foundation
 
 **Negative:**
+
 - Need to maintain two separate implementations (React and Flutter)
 - Potential for subtle differences in component behavior due to platform differences
 - Dependency on third-party packages (shadcn/ui for React, shadcn_ui for Flutter)
