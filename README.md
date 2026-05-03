@@ -3,7 +3,7 @@
 > Design token source of truth for the SealUI system — generates CSS, TypeScript, Tailwind, and Dart outputs from a single W3C DTCG token set.
 
 [![License](https://img.shields.io/badge/license-MIT-32b88c)](./LICENSE)
-[![Style Dictionary](https://img.shields.io/badge/Style_Dictionary-v4-7c3aed)](https://styledictionary.com)
+[![Style Dictionary](https://img.shields.io/badge/Style_Dictionary-4.3.3-7c3aed)](https://styledictionary.com)
 [![Check](https://github.com/nayadev/seal_ui_tokens/actions/workflows/check.yml/badge.svg)](https://github.com/nayadev/seal_ui_tokens/actions/workflows/check.yml)
 
 ---
@@ -27,36 +27,67 @@ Tokens are the single source of truth. Both the React and Flutter implementation
 
 ---
 
-## Getting Started
+## Token Categories
 
-### Consuming in React
+Token definitions live in `tokens/` and are organized into three layers. Style Dictionary compiles all layers together and writes platform-specific output files.
 
-Add to `package.json`:
+### Base tokens
 
-```json
-{
-  "dependencies": {
-    "@sealui/tokens": "github:nayadev/seal_ui_tokens#main"
-  }
-}
-```
+Primitive values shared across all themes and modes. These are building blocks — they are not used directly in components.
 
-Then import:
+| File                     | Category            | Contents                                                                                                                                                           |
+| ------------------------ | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `base/colors.json`       | Color primitives    | Raw color values: white, black, transparent, and semantic primitives (red, teal, orange, indigo, pink)                                                             |
+| `base/dimensions.json`   | Spacing scale       | 9-step scale with a 4px base unit: `xxxs` (2px) → `xxxl` (64px). Responsive — multiplied by a scale factor at runtime (mobile ×1.0, tablet ×1.125, desktop ×1.333) |
+| `base/radius.json`       | Border-radius scale | 7-step scale: `none` (0px) → `full` (9999px — pill shape)                                                                                                          |
+| `base/state-colors.json` | State opacity       | `disabled-opacity: 0.4` — the alpha multiplier applied to produce disabled color variants                                                                          |
 
-```ts
-// CSS custom properties (in your root CSS or entry file)
-import '@sealui/tokens/css/base';
-import '@sealui/tokens/css/themes/nebula-dark.css';
+### Global tokens
 
-// TypeScript/JS constants
-import { dimensionMd, styleBody } from '@sealui/tokens';
+Theme-independent tokens that apply across all themes.
 
-// Tailwind theme extension
-import sealTokensTailwind from '@sealui/tokens/tailwind';
-// tailwind.config.ts → theme: { extend: sealTokensTailwind }
-```
+| File                     | Category   | Contents                                                                                                                                                                                                                                                                                   |
+| ------------------------ | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `global/typography.json` | Typography | Font family (Inter via Google Fonts), layout constants (line-height multiplier, body/small font sizes, button icon size), and 13 named text styles: `display`, `headline`, `heading`, `title`, `subtitle`, `body-large`, `lead`, `body`, `small`, `caption`, `blockquote`, `table`, `list` |
 
-### Consuming in Flutter
+### Theme tokens
+
+Four themes, each with `dark` and `light` variants — 8 sets total. Each set contains two files:
+
+| File                                | Category      | Contents                                                                                                                                                                                                                                                                             |
+| ----------------------------------- | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `{theme}/{mode}-color-palette.json` | Color palette | `brand` (primary, tint, shade), `accent` (accent, accent-secondary, on-accent), `surface` (background, surface, surface-alt), `text` (primary, secondary, on-primary), `border` (default), `semantic` (success, warning, error, info), `state` (foreground and fill active/disabled) |
+| `{theme}/{mode}-gradients.json`     | Gradients     | `primary`, `accent`, `surface`, `surface-primary`, `surface-accent` — all linear gradients with two color stops                                                                                                                                                                      |
+
+Available themes: `arctic`, `deep_ocean`, `nebula`, `terminal`.
+
+### Build outputs
+
+| Output                  | Path                                | Format                                                     | Consumers |
+| ----------------------- | ----------------------------------- | ---------------------------------------------------------- | --------- |
+| CSS custom properties   | `build/react/src/css/base.css`      | CSS (`:root` block)                                        | React     |
+| CSS theme classes       | `build/react/src/css/themes/*.css`  | CSS (e.g. `.nebula-dark { ... }`)                          | React     |
+| TypeScript/JS constants | `build/react/src/index.ts`          | Named exports                                              | React     |
+| Tailwind config         | `build/react/src/tailwind/index.ts` | `theme.extend` object                                      | React     |
+| Dart classes            | `build/flutter/lib/src/`            | Dart classes (`SealBaseTokens`, `Seal<Theme><Mode>Tokens`) | Flutter   |
+
+---
+
+## Running the Build
+
+| Command                 | Purpose                               |
+| ----------------------- | ------------------------------------- |
+| `npm run build`         | Build all platforms (React + Flutter) |
+| `npm run build:react`   | Build React outputs only              |
+| `npm run build:flutter` | Build Flutter outputs only            |
+| `npm run clean`         | Remove all generated files            |
+| `npm run lint`          | ESLint — zero errors                  |
+| `npm run format`        | Format all files with Prettier        |
+| `npm run format:check`  | Check formatting without writing      |
+
+---
+
+## Consuming in Flutter
 
 Add to `pubspec.yaml`:
 
@@ -80,64 +111,101 @@ final spacing = SealBaseTokens.dimensionMd;        // 16.0
 
 ---
 
-## Token Categories
+## Consuming in React
 
-Token definitions live in `tokens/` and are organized into three layers. Style Dictionary compiles all layers together and writes platform-specific output files.
+Add to `package.json`:
 
-### Base tokens
+```json
+{
+  "dependencies": {
+    "@sealui/tokens": "github:nayadev/seal_ui_tokens#main"
+  }
+}
+```
 
-Primitive values shared across all themes and modes. These are building blocks — they are not used directly in components.
+Then import:
 
-| File | Category | Contents |
-| ---- | -------- | -------- |
-| `base/colors.json` | Color primitives | Raw color values: white, black, transparent, and semantic primitives (red, teal, orange, indigo, pink) |
-| `base/dimensions.json` | Spacing scale | 9-step scale with a 4px base unit: `xxxs` (2px) → `xxxl` (64px). Responsive — multiplied by a scale factor at runtime (mobile ×1.0, tablet ×1.125, desktop ×1.333) |
-| `base/radius.json` | Border-radius scale | 7-step scale: `none` (0px) → `full` (9999px — pill shape) |
-| `base/state-colors.json` | State opacity | `disabled-opacity: 0.4` — the alpha multiplier applied to produce disabled color variants |
+```ts
+// CSS custom properties (in your root CSS or entry file)
+import '@sealui/tokens/css/base'
+import '@sealui/tokens/css/themes/nebula-dark.css'
 
-### Global tokens
+// TypeScript/JS constants
+import { dimensionMd, styleBody } from '@sealui/tokens'
 
-Theme-independent tokens that apply across all themes.
-
-| File | Category | Contents |
-| ---- | -------- | -------- |
-| `global/typography.json` | Typography | Font family (Inter via Google Fonts), layout constants (line-height multiplier, body/small font sizes, button icon size), and 13 named text styles: `display`, `headline`, `heading`, `title`, `subtitle`, `body-large`, `lead`, `body`, `small`, `caption`, `blockquote`, `table`, `list` |
-
-### Theme tokens
-
-Four themes, each with `dark` and `light` variants — 8 sets total. Each set contains two files:
-
-| File | Category | Contents |
-| ---- | -------- | -------- |
-| `{theme}/{mode}-color-palette.json` | Color palette | `brand` (primary, tint, shade), `accent` (accent, accent-secondary, on-accent), `surface` (background, surface, surface-alt), `text` (primary, secondary, on-primary), `border` (default), `semantic` (success, warning, error, info), `state` (foreground and fill active/disabled) |
-| `{theme}/{mode}-gradients.json` | Gradients | `primary`, `accent`, `surface`, `surface-primary`, `surface-accent` — all linear gradients with two color stops |
-
-Available themes: `arctic`, `deep_ocean`, `nebula`, `terminal`.
-
-### Build outputs
-
-| Output | Path | Format | Consumers |
-| ------ | ---- | ------ | --------- |
-| CSS custom properties | `build/react/src/css/base.css` | CSS (`:root` block) | React |
-| CSS theme classes | `build/react/src/css/themes/*.css` | CSS (e.g. `.nebula-dark { ... }`) | React |
-| TypeScript/JS constants | `build/react/src/index.ts` | Named exports | React |
-| Tailwind config | `build/react/src/tailwind/index.ts` | `theme.extend` object | React |
-| Dart classes | `build/flutter/lib/src/` | Dart classes (`SealBaseTokens`, `Seal<Theme><Mode>Tokens`) | Flutter |
+// Tailwind theme extension
+import sealTokensTailwind from '@sealui/tokens/tailwind'
+// tailwind.config.ts → theme: { extend: sealTokensTailwind }
+```
 
 ---
 
-## Commands
+## Folder Structure
 
-| Command | Purpose |
-| ------- | ------- |
-| `npm run build` | Build all platforms (React + Flutter) |
-| `npm run build:react` | Build React outputs only |
-| `npm run build:flutter` | Build Flutter outputs only |
-| `npm run clean` | Remove all generated files |
+```
+seal_ui_tokens/
+├── tokens/
+│   ├── base/                    # Primitive color, spacing, radius, and state tokens
+│   ├── global/                  # Theme-independent typography tokens
+│   └── themes/
+│       ├── arctic/              # light + dark color palette and gradients
+│       ├── deep_ocean/
+│       ├── nebula/
+│       └── terminal/
+├── build/                       # Git-committed artifacts (do not edit)
+│   ├── flutter/
+│   │   └── lib/                 # Dart classes + pubspec.yaml
+│   └── react/
+│       ├── src/                 # CSS variables and TypeScript source
+│       └── dist/                # Bundled ESM + CJS output
+├── docs/
+│   └── adr/                     # Architecture Decision Records
+├── .github/
+│   └── workflows/
+│       └── check.yml            # Build smoke test on pull requests
+├── .husky/
+│   ├── pre-commit               # Runs lint-staged
+│   └── commit-msg               # Runs commitlint
+├── .prettierrc
+├── .prettierignore
+├── commitlint.config.js
+├── eslint.config.js
+├── package.json
+└── sd.config.js                 # Style Dictionary build config (transforms, formats, platforms)
+```
 
 ---
 
 ## Quality & Tooling
+
+### Formatting
+
+[Prettier](https://prettier.io/) enforces consistent formatting across all JS, JSON, Markdown, and CSS files. Configuration lives in `.prettierrc`. The pre-commit hook applies Prettier automatically — never format manually.
+
+### Linting
+
+[ESLint](https://eslint.org/) is configured with a minimal rule set appropriate for a config-only repository. It targets `sd.config.js` and enforces:
+
+| Rule                   | Purpose                                                                |
+| ---------------------- | ---------------------------------------------------------------------- |
+| `no-unused-vars`       | Catch dead code                                                        |
+| `no-console`           | Warn on console calls (not an error — build scripts log intentionally) |
+| `import/no-duplicates` | No duplicate import statements                                         |
+
+TypeScript-specific linting rules are not applied here — this repo contains a single JS config file, not an application codebase.
+
+### Pre-commit Hooks
+
+[Husky](https://typicode.github.io/husky/) runs two hooks on every commit:
+
+- **pre-commit** — [lint-staged](https://github.com/lint-staged/lint-staged) runs ESLint + Prettier on staged `.js` files and Prettier on `.json/.md/.css` files.
+- **commit-msg** — [commitlint](https://commitlint.js.org/) enforces [Conventional Commits](https://www.conventionalcommits.org/).
+
+### Commitlint
+
+[commitlint](https://commitlint.js.org/) with `@commitlint/config-conventional` rejects commits that do not follow the Conventional Commits format. This is required for [release-please](https://github.com/googleapis/release-please) to generate accurate changelogs and version bumps.
+
+Valid commit types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `revert`.
 
 ### Style Dictionary
 
@@ -155,15 +223,7 @@ Generated files in `build/flutter/` and `build/react/src/` are committed to git.
 
 ---
 
-## Architecture Decisions
-
-Architectural decisions are documented as ADRs in [`docs/adr/`](./docs/adr/).
-
----
-
 ## CI/CD
-
-### Build smoke test
 
 Every pull request triggers a build smoke test that runs `npm run build` and verifies that the key output files are present. This catches broken token definitions or transformer regressions before they reach consumers.
 
@@ -171,11 +231,17 @@ Workflow: `.github/workflows/check.yml`
 
 ---
 
+## Architecture Decisions
+
+Architectural decisions are documented as ADRs in [`docs/adr/`](./docs/adr/). Records cover: adopting shadcn as the design system foundation (ADR-0001), choosing a multirepo architecture over a monorepo (ADR-0002), using Style Dictionary v4 with W3C DTCG format (ADR-0003), and adopting Lucide Icons as the cross-platform icon library (ADR-0004).
+
+---
+
 ## Related Packages
 
-| Package | Description |
-| ------- | ----------- |
-| [`seal_ui_react`](https://github.com/nayadev/seal_ui_react) | React implementation of SealUI — token-driven components built on shadcn/ui |
+| Package                                                         | Description                                                                   |
+| --------------------------------------------------------------- | ----------------------------------------------------------------------------- |
+| [`seal_ui_react`](https://github.com/nayadev/seal_ui_react)     | React implementation of SealUI — token-driven components built on shadcn/ui   |
 | [`seal_ui_flutter`](https://github.com/nayadev/seal_ui_flutter) | Flutter implementation of SealUI — token-driven components built on shadcn_ui |
 
 ---
