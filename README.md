@@ -2,6 +2,7 @@
 
 > Design token source of truth for the SealUI system — generates CSS, TypeScript, Tailwind, and Dart outputs from a single W3C DTCG token set.
 
+[![Release](https://img.shields.io/github/v/release/nayadev/seal_ui_tokens)](https://github.com/nayadev/seal_ui_tokens/releases)
 [![License](https://img.shields.io/badge/license-MIT-32b88c)](./LICENSE)
 [![Style Dictionary](https://img.shields.io/badge/Style_Dictionary-4.3.3-7c3aed)](https://styledictionary.com)
 [![Check](https://github.com/nayadev/seal_ui_tokens/actions/workflows/check.yml/badge.svg)](https://github.com/nayadev/seal_ui_tokens/actions/workflows/check.yml)
@@ -206,6 +207,22 @@ TypeScript-specific linting rules are not applied here — this repo contains a 
 [commitlint](https://commitlint.js.org/) with `@commitlint/config-conventional` rejects commits that do not follow the Conventional Commits format. This is required for [release-please](https://github.com/googleapis/release-please) to generate accurate changelogs and version bumps.
 
 Valid commit types: `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `ci`, `revert`.
+
+### Versioning
+
+[release-please](https://github.com/googleapis/release-please) automates versioning and changelog generation based on [Conventional Commits](https://www.conventionalcommits.org/).
+
+On every push to `main`, the workflow inspects commits since the last release and opens (or updates) a release PR with the proposed version bump and CHANGELOG entry. The release PR stays open until the maintainer merges it — no release happens automatically.
+
+On merge of the release PR, the git tag and GitHub Release are created automatically.
+
+| Commit type                 | Version bump (pre-1.0) |
+| --------------------------- | ---------------------- |
+| `fix`                       | patch                  |
+| `feat`                      | patch                  |
+| `feat!` / `BREAKING CHANGE` | minor                  |
+
+Workflow: `.github/workflows/release-please.yml` — config in `release-please-config.json`.
 
 ### Style Dictionary
 
