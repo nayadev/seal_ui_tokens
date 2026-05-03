@@ -250,7 +250,7 @@ Workflow: `.github/workflows/check.yml`
 
 ## Architecture Decisions
 
-Architectural decisions are documented as ADRs in [`docs/adr/`](./docs/adr/). Records cover: adopting shadcn as the design system foundation (ADR-0001), choosing a multirepo architecture over a monorepo (ADR-0002), using Style Dictionary v4 with W3C DTCG format (ADR-0003), adopting Lucide Icons as the cross-platform icon library (ADR-0004), and adopting release-please for automated versioning (ADR-0005).
+Architectural decisions are documented as ADRs in [`docs/adr/`](./docs/adr/).
 
 ---
 
