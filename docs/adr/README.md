@@ -7,3 +7,4 @@
 | [ADR-0003](0003-style-dictionary-v4-with-dtcg-format.md)     | Use Style Dictionary v4 with W3C DTCG format          | Accepted |
 | [ADR-0004](0004-lucide-icons-cross-platform.md)              | Adopt Lucide Icons as the cross-platform icon library | Accepted |
 | [ADR-0005](0005-release-please-for-automated-versioning.md)  | Adopt release-please for automated versioning         | Accepted |
+| [ADR-0006](0006-renovate-bot-for-dependency-updates.md)      | Adopt Renovate Bot for automated dependency updates   | Accepted |
