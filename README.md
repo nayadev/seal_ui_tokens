@@ -4,14 +4,14 @@
 
 [![Release](https://img.shields.io/github/v/release/nayadev/seal_ui_tokens)](https://github.com/nayadev/seal_ui_tokens/releases)
 [![License](https://img.shields.io/badge/license-MIT-32b88c)](./LICENSE)
-[![Style Dictionary](https://img.shields.io/badge/Style_Dictionary-4.3.3-7c3aed)](https://styledictionary.com)
+[![Style Dictionary](https://img.shields.io/badge/Style_Dictionary-5.4.0-7c3aed)](https://styledictionary.com)
 [![Check](https://github.com/nayadev/seal_ui_tokens/actions/workflows/check.yml/badge.svg)](https://github.com/nayadev/seal_ui_tokens/actions/workflows/check.yml)
 
 ---
 
 ## Overview
 
-SealUI Tokens is the single source of truth for all design decisions in the SealUI system. Token definitions are written once in [W3C DTCG](https://tr.designtokens.org/format/) JSON format and compiled by [Style Dictionary v4](https://styledictionary.com) into platform-specific outputs consumed by both the React and Flutter implementations.
+SealUI Tokens is the single source of truth for all design decisions in the SealUI system. Token definitions are written once in [W3C DTCG](https://tr.designtokens.org/format/) JSON format and compiled by [Style Dictionary v5](https://styledictionary.com) into platform-specific outputs consumed by both the React and Flutter implementations.
 
 Generated build artifacts are committed to git so consumers can depend on this repository directly without running the build themselves.
 
@@ -226,7 +226,7 @@ Workflow: `.github/workflows/release-please.yml` — config in `release-please-c
 
 ### Style Dictionary
 
-[Style Dictionary v4](https://styledictionary.com) reads all JSON files from `tokens/`, applies platform-specific transforms, and writes output files to `build/`. Configuration lives in `sd.config.js`.
+[Style Dictionary v5](https://styledictionary.com) reads all JSON files from `tokens/`, applies platform-specific transforms, and writes output files to `build/`. Configuration lives in `sd.config.js`.
 
 Token JSON files follow the [W3C DTCG format](https://tr.designtokens.org/format/) — each token has `$value`, `$type`, and optional `$description` fields. This format is compatible with Figma Tokens, Token Studio, and similar design tooling.
 

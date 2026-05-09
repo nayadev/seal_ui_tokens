@@ -10,7 +10,7 @@
 
 ## Status
 
-Accepted
+Superseded by [ADR-0007](0007-upgrade-style-dictionary-v5.md)
 
 ## Context
 
