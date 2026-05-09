@@ -1,0 +1,9 @@
+{
+  "eslint.useFlatConfig": true,
+  "eslint.validate": ["javascript"],
+  "eslint.workingDirectories": ["."],
+  "dart.analysisExcludedFolders": ["node_modules"],
+  "files.watcherExclude": {
+    "**/node_modules/**": true
+  }
+}
