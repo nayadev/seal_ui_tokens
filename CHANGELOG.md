@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.0.3](https://github.com/nayadev/seal_ui_tokens/compare/v0.0.2...v0.0.3) (2026-05-10)
+
+
+### Bug Fixes
+
+* **deps:** update dependency style-dictionary to v5 ([#7](https://github.com/nayadev/seal_ui_tokens/issues/7)) ([b790b7c](https://github.com/nayadev/seal_ui_tokens/commit/b790b7ccf7dbf06abd85d89031b0ce88e20e4352))
+
 ## [0.0.2](https://github.com/nayadev/seal_ui_tokens/compare/v0.0.1...v0.0.2) (2026-05-03)
 
 
